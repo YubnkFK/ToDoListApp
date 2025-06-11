@@ -61,9 +61,13 @@ const FormEdit: React.FC = () => {
     }
 
     try {
-      await modifyTodo(formData);
-      Alert.alert('Success', 'To-do modified!');
-      navigation.navigate('Home');
+      const success = await modifyTodo(formData);
+      if (success) {
+        Alert.alert('Success', 'To-do modified!');
+        navigation.navigate('Home');
+      } else {
+        throw new Error();
+      }
     } catch (error) {
       Alert.alert('Error', 'Failed to modify to-do.');
     }

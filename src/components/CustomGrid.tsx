@@ -8,6 +8,7 @@ import {
   Dimensions,
 } from 'react-native';
 import {ToDo} from '../models/ToDo';
+import {useAppNavigation} from '../hook/useNavigation';
 import {useTodos} from '../hook/useTodos';
 import CustomCard from './CustomCard';
 import CustomModal from './CustomModal';
@@ -21,6 +22,7 @@ const NUM_COLUMNS = 2;
 const SPACING = 10;
 const CARD_WIDTH = (screenWidth - SPACING * (NUM_COLUMNS + 1)) / NUM_COLUMNS;
 const CustomGrid: React.FC<CustomGridProps> = ({todos}) => {
+  const navigation = useAppNavigation();
   const [selectedToDo, setSelectedId] = useState<ToDo | null>(null);
   const {removeTodo} = useTodos();
 
@@ -29,6 +31,8 @@ const CustomGrid: React.FC<CustomGridProps> = ({todos}) => {
       const success = await removeTodo(selectedToDo._id);
       if (success) {
         setSelectedId(null);
+        Alert.alert('Success', 'Task deleted successfully');
+        navigation.navigate('Home');
       } else {
         Alert.alert('Error', 'Could not delete the task');
       }

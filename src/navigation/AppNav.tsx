@@ -22,7 +22,12 @@ const AppNav: React.FC = () => {
       <Stack.Screen
         name="Home"
         component={HomeScreen}
-        options={{title: 'To-Do List', headerShown: true}}
+        options={{
+          title: 'To-Do List',
+          headerShown: true,
+          headerBackVisible: false,
+          headerTitleAlign: 'center',
+        }}
       />
       <Stack.Screen name="FormCreate" component={FormCreate} />
       <Stack.Screen name="FormEdit" component={FormEdit} />

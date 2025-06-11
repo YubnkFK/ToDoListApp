@@ -37,6 +37,7 @@ export const useTodos = () => {
   const removeTodo = async (id: string) => {
     const result = await dispatch(deleteTodo(id));
     if (deleteTodo.fulfilled.match(result)) {
+      await dispatch(fetchTodos());
       return true;
     } else {
       console.error('Failed to delete todo:', result);

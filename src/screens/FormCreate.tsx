@@ -39,6 +39,7 @@ const FormCreate: React.FC = () => {
       await addNewTodo(formData);
       Alert.alert('Success', 'To-do created!');
       setFormData({title: '', description: '', completed: false});
+      navigation.navigate('Home');
     } catch (error) {
       Alert.alert('Error', 'Failed to create to-do.');
     }

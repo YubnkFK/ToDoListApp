@@ -5,7 +5,7 @@ const BASE_URL = 'http://10.0.2.2:3000';
 type TodosState = {
   todo: ToDo | null;
   todos: ToDo[];
-  loading?: boolean;
+  loading: boolean;
   error?: string | null;
 };
 
@@ -81,7 +81,7 @@ export const updateTodo = createAsyncThunk<ToDo, Partial<ToDo>>(
       throw new Error('Failed to update todo');
     }
     const data = await response.json();
-    return data.todo;
+    return data.updatedTodo as ToDo;
   },
 );
 
