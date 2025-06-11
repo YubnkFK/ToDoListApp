@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="9" failures="0" errors="0" time="1.964">
+  <testsuite name="App" errors="0" failures="0" skipped="0" timestamp="2025-06-11T19:00:24" time="0.851" tests="1">
+    <testcase classname="App should render without crashing" name="App should render without crashing" time="0.015">
+    </testcase>
+  </testsuite>
+  <testsuite name="HomeScreen" errors="0" failures="0" skipped="0" timestamp="2025-06-11T19:00:24" time="1.39" tests="1">
+    <testcase classname="HomeScreen should render correctly" name="HomeScreen should render correctly" time="0.234">
+    </testcase>
+  </testsuite>
+  <testsuite name="FormEdit" errors="0" failures="0" skipped="0" timestamp="2025-06-11T19:00:24" time="1.52" tests="5">
+    <testcase classname="FormEdit renders correctly and loads todo" name="FormEdit renders correctly and loads todo" time="0.322">
+    </testcase>
+    <testcase classname="FormEdit shows alert and navigates home if todo not found" name="FormEdit shows alert and navigates home if todo not found" time="0.003">
+    </testcase>
+    <testcase classname="FormEdit handles modifyTodo success" name="FormEdit handles modifyTodo success" time="0.008">
+    </testcase>
+    <testcase classname="FormEdit handles modifyTodo failure" name="FormEdit handles modifyTodo failure" time="0.005">
+    </testcase>
+    <testcase classname="FormEdit shows alert when form fields are empty" name="FormEdit shows alert when form fields are empty" time="0.007">
+    </testcase>
+  </testsuite>
+  <testsuite name="FormCreate" errors="0" failures="0" skipped="0" timestamp="2025-06-11T19:00:24" time="1.622" tests="2">
+    <testcase classname="FormCreate renders correctly and submits form" name="FormCreate renders correctly and submits form" time="0.297">
+    </testcase>
+    <testcase classname="FormCreate shows error alert if fields are empty" name="FormCreate shows error alert if fields are empty" time="0.003">
+    </testcase>
+  </testsuite>
+</testsuites>

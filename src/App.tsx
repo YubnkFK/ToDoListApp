@@ -1,10 +1,10 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import AppNav from './src/navigation/AppNav';
+import AppNav from './navigation/AppNav';
 import {Provider} from 'react-redux';
-import store from './src/store/store';
+import store from './store/store';
 
-const App = (): React.JSX.Element => {
+const App = () => {
   return (
     <Provider store={store}>
       <NavigationContainer>
